@@ -179,15 +179,17 @@ function Logo() {
   </div>;
 }
 
-function Search({ query, setQuery }) {}
-
-<input
-  className="search"
-  type="text"
-  placeholder="Search movies..."
-  value={query}
-  onChange={(e) => setQuery(e.target.value)}
-/>;
+function Search({ query, setQuery }) {
+  return (
+    <input
+      className="search"
+      type="text"
+      placeholder="Search movies..."
+      value={query}
+      onChange={(e) => setQuery(e.target.value)}
+    />
+  );
+}
 
 function NumResults({ movies }) {
   return (
@@ -293,6 +295,14 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
       getMovieDetails();
     },
     [selectedId]
+  );
+
+  useEffect(
+    function () {
+      if (!title) return;
+      document.title = `Movie | ${title}`;
+    },
+    [title]
   );
 
   return (
