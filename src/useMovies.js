@@ -45,7 +45,6 @@ export function useMovies(query) {
         return;
       }
 
-      handleCloseMovie();
       fetchMovies();
 
       return function () {
