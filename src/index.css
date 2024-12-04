@@ -29,6 +29,8 @@ body {
   padding: 2.4rem;
 }
 
+/* ******* */
+
 .nav-bar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -69,6 +71,8 @@ body {
   font-size: 2rem;
   padding: 4.8rem;
 }
+
+/* ******* */
 
 .logo {
   display: flex;
@@ -202,6 +206,8 @@ body {
   background-color: var(--color-red-dark);
 }
 
+/* ******* */
+
 .summary {
   padding: 2.2rem 3.2rem 1.8rem 3.2rem;
   border-radius: 0.9rem;
@@ -228,6 +234,8 @@ body {
   align-items: center;
   gap: 0.8rem;
 }
+
+/* ******* */
 
 .details {
   line-height: 1.4;

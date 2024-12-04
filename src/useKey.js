@@ -15,6 +15,6 @@ export function useKey(key, action) {
         document.removeEventListener("keydown", callback);
       };
     },
-    [key, action]
+    [action, key]
   );
 }

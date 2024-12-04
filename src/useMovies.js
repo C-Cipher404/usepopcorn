@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const KEY = "25352a27";
+const KEY = "c8382502";
 
 export function useMovies(query) {
   const [movies, setMovies] = useState([]);
@@ -17,7 +17,7 @@ export function useMovies(query) {
           setError("");
 
           const res = await fetch(
-            `https://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
+            `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`,
             { signal: controller.signal }
           );
 
@@ -39,7 +39,7 @@ export function useMovies(query) {
         }
       }
 
-      if (!query.length < 3) {
+      if (query.length < 3) {
         setMovies([]);
         setError("");
         return;
@@ -53,5 +53,6 @@ export function useMovies(query) {
     },
     [query]
   );
+
   return { movies, isLoading, error };
 }
